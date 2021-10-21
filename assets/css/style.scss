@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Spartan', sans-serif;
+}
+
+// THEME #1 //
+
+// BG
+$Very-dark-desaturated-blue: hsl(222, 26%, 31%);
+$Very-dark-desaturated-blue: hsl(223, 31%, 20%);
+$Very-dark-desaturated-blue: hsl(224, 36%, 15%);
+
+// KEYS
+$Desaturated-dark-blue: hsl(225, 21%, 49%);
+$Desaturated-dark-blue-shadow: hsl(224, 28%, 35%);
+$Red: hsl(6, 63%, 50%);
+$Dark-red: hsl(6, 70%, 34%);
+$Light-grayish-orange-bg: hsl(30, 25%, 89%);
+$Grayish-orange-shadow: hsl(28, 16%, 65%);
+
+// text
+$Very-dark-grayish-blue: hsl(221, 14%, 31%);
+$White: rgb(255, 255, 255);
+
+
+
+// placeholders //
+%upper_case {
+    text-transform: uppercase;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    grid-template-areas: "title title title title"
+                         "result result result result"
+                         "buttons buttons buttons buttons"; 
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;  
+}
+
+.title {
+    grid-area: title;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.theme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.theme-options {
+    width: 90%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.display {
+    grid-area: result;
+}
+
+.btn-container {
+    grid-area: buttons;
+    padding: 1em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-gap: 10px;
+
+    .del {
+        @extend %upper_case;
+    }
+
+    .reset {
+        @extend %upper_case;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .equals {
+        @extend %upper_case;
+        grid-column-start: 3;
+        grid-column-end: 5;
+
+    }
+}
