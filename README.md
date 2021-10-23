@@ -20,7 +20,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- 🌐 Demo: [Netlify](calculatorapp-js.netlify.app)
+- 🌐 Demo: [Netlify](https://calculatorapp-js.netlify.app/)
 
 ### 💼 Construido com:
 
